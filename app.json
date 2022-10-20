@@ -1,0 +1,111 @@
+{
+  "name": "HIDRA21RTX-Bot-OTV",
+  "description": "Un bot de Pyrogram Telegram para transmitir archivos de Telegram a la web.",
+  "keywords": [
+      "telegram",
+      "stream",
+      "web",
+      "pyrogram",
+      "aiohttp",
+      "python",
+      "plugin",
+      "modular",
+      "media",
+      "bot"
+    ],
+  "repository": "https://github.com/HIDRA21RTX/Bot-OTV/",
+  "success_url": "/",
+  "logo": "https://i.ibb.co/MnMZ1Sy/download-1.jpg",
+  "website": "none",
+  "env": {
+      "ENV": {
+          "description": "Establezca esto en Verdadero si no desea bloquear el bot",
+          "value": "True"
+      },
+      "APP_NAME": {
+          "description": "Copie y pegue el nombre de la aplicación que acaba de escribir arriba."
+      },
+      "API_ID": {
+          "description": "Obtenga este valor de https://my.telegram.org"
+      },
+      "API_HASH": {
+          "description": "Obtenga este valor de https://my.telegram.org"
+      },
+      "BOT_TOKEN": {
+          "description": "Obtenga este valor de @BotFather"
+      },
+      "BIN_CHANNEL": {
+          "description": "El ID del canal BIN. Lea el archivo Léame para obtener más información sobre esta var."
+          
+      },
+      "DATABASE_URL": {
+          "description": "MongoDB URI para guardar ID de usuario cuando inician el bot por primera vez. Usaremos eso para Transmitirles. Intentaré agregar más funciones relacionadas con la base de datos. Si necesitas ayuda busca un tutorial en youtube"
+      },
+      "OWNER_ID": {
+          "description": "Su id de usuario de Telegram como 1234509"
+      },
+      "BANNED_CHANNELS": {
+          "description": "Coloque ID de canales prohibidos donde el bot no funcionará. Puede agregar varias identificaciones y separarlas con espacio.",
+          "required": false
+      },
+      "UPDATES_CHANNEL": {
+          "description": "Ponga un nombre de usuario de canal público sin @, de modo que cada usuario tenga que unirse a ese canal para usar el bot. Debe agregar el bot al canal como administrador para que funcione correctamente. SI NO QUIERE MANTENER EL VALOR COMO Ninguno",
+          "value":"None",
+          "required": false
+          
+      },
+      "OWNER_USERNAME": {
+          "description": "Ingrese su nombre de usuario sin @ ejemplo adarsh."
+      },
+      "SLEEP_THRESHOLD": {
+          "description": "Temporizador de suspensión Floodwait. Lea el archivo Léame para obtener más información sobre esta var.",
+          "required": false
+      },
+      "WORKERS": {
+          "description": "Nº de trabajadores a asignar. Lea el archivo Léame para obtener más información sobre esta var.",
+          "required": false
+      },
+      "PORT": {
+          "description": "Puerto en el que desea que se escuche su aplicación web. Lea el archivo Léame para obtener más información sobre esta var.",
+          "value": "8080",
+          "required": false
+      },
+      "NO_PORT": {
+          "description": "Si no desea que se muestre su puerto. Lea el archivo Léame para obtener más información sobre esta var.",
+          "value": "False",
+          "required": false
+      },
+      "HAS_SSL": {
+          "description": "El valor predeterminado es Verdadero",
+          "value": "True",
+          "required": false
+      },
+       "MY_PASS": {
+          "description": "Deje vacío si no necesita contraseña, de lo contrario ingrese su contraseña",
+          "value": "",
+          "required": false
+      },
+      "BIND_ADRESS": {
+          "description": "Lea el archivo Léame para obtener más información sobre esta var Dejar vacía para heroku",
+          "required": false
+      },
+      "FQDN": {
+          "description": "Lea el archivo Léame para obtener más información sobre esta var **Dejar vacío para heroku**",
+          "required": false
+      },
+      "SESSION_NAME": {
+          "description": "Nombre de sesión para Bot [Agregar adarsh-goel]",
+          "value": "OwTV-Bot-Files",
+          "required": false
+      }
+  },
+  "buildpacks": [{
+      "url": "heroku/python"
+    }],
+  "formation": {
+      "web": {
+          "quantity": 1,
+          "size": "free"
+      }
+  }
+}
